@@ -8,5 +8,7 @@ Embedded Payload into orginal apk
 
 [#] Requirements ~ Metasploit Framework ✓
                    python 2.7 ✓
+                   java ✓
+                   zipalign ✓
                    
 Very Handy Metasploit Payload Binding & Listener
